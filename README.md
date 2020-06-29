@@ -1,7 +1,11 @@
 # School_District_Analysis
 jupyter notebook
 
+The module 4 took around 16 hours to go step by step through the breakdown of the School district data. Throughout the entire analysis, there were multiple data points broken down which helped the analyst see the potential harm the 9th graders at Thomas High School delivered to their alma mater. I provided both sets of code, the first being the PyCitySChools.ipnyb which was completed during the 16 hours of the module and I also provide the PyCitySchools_Challenge which includes the erasing, or replacing of the 9th grader's math and reading scores due to suspicion of academic dishonesty with NAN. I compared and contrast both codes, as one being the benchmark with all the data from the entire schools, grades, districts, monies spent etc to help arrive to the below answers. The one key piece of code in the _Challenge ipnyb is the additiion of the below code which replaced the 9th graders math and reading scores at Thomas High:
 
+student_data_df.loc[(student_data_df['grade'] =='9th') & (student_data_df['school_name'] =='Thomas High School') & (student_data_df['math_score'] >0), ['math_score']] = np.nan
+                                                                                                                       
+student_data_df
 
 Analysis:
 The School District Analysis requested we replace the reading and math scores for 9th graders at the Thomas High School with "NAN" due to irregularities with their grades which is under the suspicion that academic dishonesty is in play. After changing the 9th grader's scores, we are prompted to answer a few questions in order to see the material changes due to the NAN of reading and math scores for 9th graders at the Thomas High School.
